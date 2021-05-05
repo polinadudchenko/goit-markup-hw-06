@@ -612,7 +612,7 @@ img {
   border-radius: 4px;
   background-color: var(--dark-bg);
 
-  transition: border var(--animation);
+  transition: border var(--animation), outline var(--animation);
 }
 
 .newsletter-mail::placeholder {
@@ -628,6 +628,7 @@ img {
 
 .newsletter-mail:focus {
   outline: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 .newsletter-button {
   display: inline-flex;
@@ -689,7 +690,7 @@ img {
   max-height: 100vh;
   overflow-y: auto;
 
-  padding: 40px 30px;
+  padding: 40px 40px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -701,8 +702,8 @@ img {
 
 .modal-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 8px;
+  right: 8px;
 
   display: flex;
   justify-content: center;
@@ -728,4 +729,149 @@ img {
 
 .modal-close:hover .modal-icon {
   fill: var(--accent-color);
+}
+
+.form-request {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+}
+
+.request-title {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--main-title-color);
+}
+
+.request-field {
+  position: relative;
+  display: block;
+}
+
+.request-field:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.request-label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--alt-text-color);
+
+  transform: translateY(-50%);
+  transition: transform var(--animation);
+}
+
+.request-field:focus-within .request-label {
+  transform: translate(-40px, -38px);
+}
+
+.request-input:not(:placeholder-shown) + .request-label {
+  transform: translate(-40px, -38px);
+}
+
+.request-comment-label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--alt-text-color);
+}
+
+.request-input {
+  display: block;
+  width: 448px;
+  height: 40px;
+  padding-left: 40px;
+  color: var(--alt-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.request-field:focus-within .request-input {
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
+}
+.request-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.request-field:focus-within .request-icon {
+  fill: var(--accent-color);
+}
+
+.request-comment-input {
+  display: block;
+  margin-bottom: 20px;
+  height: 120px;
+}
+
+.request-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.check-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+}
+
+.checkbox-input:checked + .check-icon {
+  background-image: url('../images/check.svg');
+  background-size: contain;
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.checkbox-text {
+  margin-left: 7px;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--alt-text-color);
+}
+.conditions-link {
+  color: var(--accent-color);
+}
+
+.request-btn {
+  margin-left: auto;
+  margin-right: auto;
+
+  min-width: 200px;
+  min-height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
