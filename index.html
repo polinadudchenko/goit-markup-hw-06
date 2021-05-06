@@ -410,7 +410,7 @@
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
-        <form class="form-request">
+        <form class="form-request" autocomplete="off">
           <h3 class="request-title">Leave your details here, we will call you back</h3>
           <label class="request-field">
             <input type="text" name="name" class="request-input" placeholder=" " />
@@ -433,16 +433,16 @@
               <use href="./images/icons.svg#email-modal"></use>
             </svg>
           </label>
-          <label class="request-field comment">
-            <input type="textarea" name="comment" class="request-comment-input" rows="50" />
+          <label class="request-comment-field">
+            <textarea name="comment" class="request-comment-input" placeholder=" "></textarea>
             <span class="request-comment-label">Your comment</span>
           </label>
           <label class="request-checkbox">
             <input class="checkbox-input visually-hidden" type="checkbox" name="checkbox" />
             <span class="check-icon"></span>
-            <span class="checkbox-text"
-              >I agree to a newsletter and accept <a class="conditions-link" href="">the Terms and Conditions</a></span
-            >
+            <span class="checkbox-text">
+              I agree to a newsletter and accept <a class="conditions-link" href="">the Terms and Conditions</a>
+            </span>
           </label>
           <button class="request-btn" type="submit">Send</button>
         </form>
