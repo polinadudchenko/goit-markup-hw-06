@@ -501,12 +501,14 @@ img {
   color: var(--white-text-color);
   background-color: rgba(33, 150, 243, 0.9);
 
+  opacity: 0;
   transform: translateY(100%);
-  transition: transform var(--animation);
+  transition: transform var(--animation), opacity var(--animation);
 }
 
 .portfolio-link:hover .portfolio-overlay {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .portfolio-content {
@@ -868,6 +870,10 @@ textarea {
   border: 2px solid var(--main-text-color);
   border-radius: 2px;
   transition: background-color var(--animation), border var(--animation);
+}
+
+.checkbox-input:focus + .check-icon {
+  border-color: var(--accent-color);
 }
 
 .checkbox-input:checked + .check-icon {
